@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object class</title>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+    <script>
+        // Object = collection of key-value pairs;
+        // object can make by 2 ways
+        // 1. literal 
+        // 2. Object.create
+
+
+        // //literat
+        // let person = {
+        //     name:'vinay',
+        //     age:20,
+        //     class:'js',
+        // }
+        // let x='name'
+        // document.write(person)
+        // console.log(person)
+
+
+        // 2.Object.create
+
+        // let person =Object.create(null)
+        //     person.name='vinay',
+        //     person.age=20,
+        //     person.course='js'
+         
+        //     let x = 'age'
+        // console.log(person['name'])
+
+
+
+        //hasOwn
+
+        // console.log(Object.hasOwn(person,['name']))
+
+
+            // if(Object.hasOwn(person,x)){
+            //     console.log(person.name)
+            // }
+
+         
+       
+        
+        // let name ='age'
+        // console.log(person['name'])
+        // Object.keys  
+        // console.log(Object.keys(person))
+        // document.write(Object.keys(person))
+
+
+        let person = {
+            name:'vinay',
+            age:20,
+            class:'js',
+        }
+        // for...in
+      let student={
+        firstname:"chandrashekhar",
+        lastname:"saini",
+        course:"front-end",
+        sachin:'tendulkar'
+      }
+
+      //shallow copy
+    //   let student2 =student
+    let student2 = {...student}
+      student2.course = 'back-end'
+      console.log(student.course)
+
+    //   for(let x in student){
+    //     document.write(x +':'+ student[x]+"<br>")
+    //   }
+        
+    // document.write('firstname:'+student.firstname +'<br>'+'lastname: '+student.lastname);
+    // // console.log(Object.keys(student))
+    // let keyarray = Object.keys(student)
+    // console.log(keyarray[2] +':' +student[keyarray[2]]);
+
+
+
+
+
+
+    //   let firstname= 'sachin'
+    //   console.log(student['firstname'])
+    //   let kailash="course"
+    //   console.log(student[kailash])
+
+
+     
+    </script>
+</body>
+</html>
