@@ -39,18 +39,29 @@
         // console.log(person['name'])
 
 
+        
+        // How to access properties from objects: 
+        // -using array notation
+        // -using dot notation
+
+        // document.write(person['name'])
+        // document.write(person.name)
+
+        // document.write(person[name]) //this will be undefined. As we do not have a variable defined as name
+
+
 
         //hasOwn
 
         // console.log(Object.hasOwn(person,['name']))
 
 
-            // if(Object.hasOwn(person,x)){
-            //     console.log(person.name)
-            // }
+        // if(Object.hasOwn(person,x)){
+        //     console.log(person.name)
+        // }
 
          
-       
+       //    console.log( Object.keys(person)) //returns all the keys from object in an array
         
         // let name ='age'
         // console.log(person['name'])
@@ -59,28 +70,49 @@
         // document.write(Object.keys(person))
 
 
+      
+        // for...in
+        //   for(let x in student){
+        //  document.write(x +':'+ student[x]+"<br>")
+        //   }
+
+    
+
+
+        //Copying an object into another
+        //Copying is done in 2 ways: shallow and deep
+        //Shallow copy: both the objects contain the same values & point to the same location in the memory.
+        //Deep copy: both the objects contain the same values but point to different memory locations.
+      
+        //shallow copy
         let person = {
             name:'vinay',
             age:20,
             class:'js',
         }
-        // for...in
-      let student={
+
+        let student={
         firstname:"chandrashekhar",
         lastname:"saini",
         course:"front-end",
         sachin:'tendulkar'
       }
-
-      //shallow copy
-    //   let student2 =student
-    let student2 = {...student}
+     //   let student2 =student
+     let student2 = {...student}
       student2.course = 'back-end'
       console.log(student.course)
 
-    //   for(let x in student){
-    //     document.write(x +':'+ student[x]+"<br>")
-    //   }
+    
+         // Here no copying is happening
+        // let person2 = Object.create(person)
+
+        // person2.name = 'Abha'
+        // // console.log(person2)
+
+        // console.log(person.name)
+
+
+        // let person2 = {...person} //Deep Copy
         
     // document.write('firstname:'+student.firstname +'<br>'+'lastname: '+student.lastname);
     // // console.log(Object.keys(student))
